@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #135bec;
+  --color-primary-dark: #0f4bc4;
+  --color-card-dark: #1c2533;
+
+  --color-background-light: #f6f6f8;
+  --color-background-dark: #101622;
+
+  --color-text-main: #0d121b;
+  --color-text-sub: #4c669a;
+
+  --font-display: "Lexend", "Manrope", sans-serif;
+  --font-body: "Manrope", sans-serif;
+}
+@custom-variant dark (&:where(.dark, .dark *));
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(4px);
+  }
+}
+
+.animate-shake {
+  animation: shake 0.2s ease-in-out 0s 2;
+}
